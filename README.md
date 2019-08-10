@@ -22,3 +22,6 @@ React Native sample app using MobX in both Class and Functional components.
     - Class or Functional components are not reative when store props are used within render props of non observer components.
     - Workaround is to use store props outside render props, or use HOC instead of render props.
     - Best to avoid both render props and HOC, which is doable with Functional components and hooks.
+    
+## Resources
+- https://twitter.com/jamonholmgren/status/1153866321966166016
