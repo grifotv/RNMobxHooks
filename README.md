@@ -26,3 +26,5 @@ React Native sample app using MobX in both Class and Functional components.
 ## Resources
 - https://twitter.com/jamonholmgren/status/1153866321966166016
 - https://iconof.com/best-practices-for-mobx-with-react/
+- https://mobx.js.org/best/pitfalls.html
+- https://mobx-react.js.org/recipes-migration
