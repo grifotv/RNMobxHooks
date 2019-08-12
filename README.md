@@ -10,9 +10,9 @@ React Native sample app using MobX in both Class and Functional components.
 
 ## Known issues and workarounds
 - Unable to use MobX-React 6 decorators in React Native 0.59 https://github.com/mobxjs/mobx-react/issues/690
-    - Decorators workaround https://github.com/mobxjs/mobx-react/issues/690#issuecomment-508647033
+    - Workaround https://github.com/mobxjs/mobx-react/issues/690#issuecomment-508647033
     - Fix for this won't land until React Native 0.61 https://github.com/facebook/react-native/issues/24553#issuecomment-507779134
-    - Dan Abramov recommend avoiding the use of decorators https://github.com/facebook/react-native/issues/24553#issuecomment-517075258
+    - Dan Abramov recommend avoiding the use of decorators yet https://github.com/facebook/react-native/issues/24553#issuecomment-517075258
 - Pass stores around
     - Can be done via `inject` HOC of via React context API in both Class and Functional components
     - Simpler to use hooks in Functional components https://mobx-react.js.org/recipes-migration#hooks-for-the-rescue
