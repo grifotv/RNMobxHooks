@@ -6,10 +6,6 @@ import { Screen } from './Screen';
 
 const rootStore = new RootStore();
 
-setInterval(() => {
-  rootStore.counter += 1;
-}, 1000);
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -20,6 +16,12 @@ type Props = {
 }
 
 export const App:React.FC<Props> = () => {
+  React.useEffect(() => {
+    setInterval(() => {
+      rootStore.increment();
+    }, 1000);
+  }, [])
+
   return (
     <Provider rootStore={rootStore}>
       <SafeAreaView style={styles.container}>
