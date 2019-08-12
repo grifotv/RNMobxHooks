@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { inject, observer } from 'mobx-react';
-import { RenderPropsComponent } from './RenderPropsComponent';
+import { RenderCallbackComponent } from './RenderCallbackComponent';
 import { getRandomColor } from '../utils/colorUtils';
 import { RootStore } from '../stores/RootStore';
 
@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
 //         const { rootStore, title } = this.props;
 //         return (
 //             <View style={[styles.container, { backgroundColor: getRandomColor() }]}>
-//                 <RenderPropsComponent>
+//                 <RenderCallbackComponent>
 //                     {() => (
 //                         <Text style={styles.title}>{title} {rootStore!.counter}</Text>
 //                     )}
-//                 </RenderPropsComponent>
+//                 </RenderCallbackComponent>
 //             </View>
 //         )
 //     }
@@ -48,11 +48,11 @@ class BaseClassComponent extends React.Component<Props> {
         const { counter } = rootStore!;
         return (
             <View style={[styles.container, { backgroundColor: getRandomColor() }]}>
-                <RenderPropsComponent>
+                <RenderCallbackComponent>
                     {() => (
                         <Text style={styles.title}>{title} {counter}</Text>
                     )}
-                </RenderPropsComponent>
+                </RenderCallbackComponent>
             </View>
         )
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { inject, observer } from 'mobx-react';
-import { RenderPropsComponent } from './RenderPropsComponent';
+import { RenderCallbackComponent } from './RenderCallbackComponent';
 import { useRootStore } from '../stores/useRootStore';
 import { getRandomColor } from '../utils/colorUtils';
 import { RootStore } from '../stores/RootStore';
@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
 // const BaseFunctionalComponent:React.FC<Props> = ({ title, rootStore }) => {
 //     return (
 //         <View style={[styles.container, { backgroundColor: getRandomColor() }]}>
-//             <RenderPropsComponent>
+//             <RenderCallbackComponent>
 //                 {() => (
 //                     <Text style={styles.title}>{title} {rootStore!.counter}</Text>
 //                 )}
-//             </RenderPropsComponent>
+//             </RenderCallbackComponent>
 //         </View>
 //     )
 // };
@@ -44,11 +44,11 @@ const styles = StyleSheet.create({
 //     const { counter } = rootStore!;
 //     return (
 //         <View style={[styles.container, { backgroundColor: getRandomColor() }]}>
-//             <RenderPropsComponent>
+//             <RenderCallbackComponent>
 //                 {() => (
 //                     <Text style={styles.title}>{title} {counter}</Text>
 //                 )}
-//             </RenderPropsComponent>
+//             </RenderCallbackComponent>
 //         </View>
 //     )
 // };
@@ -62,11 +62,11 @@ const styles = StyleSheet.create({
 //     const rootStore = useRootStore();
 //     return (
 //         <View style={[styles.container, { backgroundColor: getRandomColor() }]}>
-//             <RenderPropsComponent>
+//             <RenderCallbackComponent>
 //                 {() => (
 //                     <Text style={styles.title}>{title} {rootStore.counter}</Text>
 //                 )}
-//             </RenderPropsComponent>
+//             </RenderCallbackComponent>
 //         </View>
 //     )
 // });
@@ -80,11 +80,11 @@ export const FunctionalComponent:React.FC<Props> = observer(({ title }) => {
     const { counter } = rootStore;
     return (
         <View style={[styles.container, { backgroundColor: getRandomColor() }]}>
-            <RenderPropsComponent>
+            <RenderCallbackComponent>
                 {() => (
                     <Text style={styles.title}>{title} {counter}</Text>
                 )}
-            </RenderPropsComponent>
+            </RenderCallbackComponent>
         </View>
     )
 });

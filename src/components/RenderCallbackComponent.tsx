@@ -4,6 +4,6 @@ type Props = {
     children: () => any
 }
 
-export const RenderPropsComponent:React.FC<Props> = (props) => {
+export const RenderCallbackComponent:React.FC<Props> = (props) => {
     return props.children();
 }
