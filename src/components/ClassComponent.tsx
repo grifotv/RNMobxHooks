@@ -16,12 +16,11 @@ const styles = StyleSheet.create({
     },
 });
 
-type Props = {
-    rootStore?: RootStore
-    title: string
-};
-
-// // 👎 Non reactive as rootStore prop is used inside render props
+// // 👎 Not reactive: class component with inject
+// type Props = {
+//     rootStore?: RootStore
+//     title: string
+// };
 // class BaseClassComponent extends React.Component<Props> {
 //     render() {
 //         const { rootStore, title } = this.props;
@@ -36,8 +35,13 @@ type Props = {
 //         )
 //     }
 // }
+// export const ClassComponent = inject('rootStore')(observer(BaseClassComponent));
 
-// 👍 Reactive as rootStore prop is used outside render props
+// 👍 Reactive: class component with inject
+type Props = {
+    rootStore?: RootStore
+    title: string
+};
 class BaseClassComponent extends React.Component<Props> {
     render() {
         const { rootStore, title } = this.props;
@@ -53,5 +57,4 @@ class BaseClassComponent extends React.Component<Props> {
         )
     }
 }
-
 export const ClassComponent = inject('rootStore')(observer(BaseClassComponent));
